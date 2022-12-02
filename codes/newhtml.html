@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PREFERENCES</title>
+	<link rel="stylesheet" href="newcss.css">
+</head>
+<body>
+<form name="f1" action="pre.jsp" method="post">
+<div class="wrapper">
+  <div class="title">
+    Choose your favorite language from below options
+  </div>
+  <div class="container">
+    <label class="option_item">
+      <input type="radio" name=chk_lang class="radio" value="English">
+      <div class="option_inner english">
+        <img src="pictures/playy.png" class="tickmark" onclick="document.getElementById('sound1').play();">
+      </div>
+      <div class="name">English</div>
+      <audio id="sound1" src="Kaise Hua.mp3" preload="auto"></audio>
+    </label>
+ 
+    <label class="option_item">
+      <input type="radio" name="chk_lang" class="radio" checked value="Hindi">
+      <div class="option_inner hindi">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-twitter"></i></div>
+        <div class="name">Hindi</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="radio" name="chk_lang" class="radio" value="Punjabi">
+      <div class="option_inner punjabi">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-instagram"></i></div>
+        <div class="name">Punjabi</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="radio" name="chk_lang" class="radio" checked value="Spanish">
+      <div class="option_inner spanish">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fab fa-linkedin-in"></i></div>
+        <div class="name">Spanish</div>
+      </div>
+    </label>
+  </div>
+  </div>
+<div class="final">
+    <input type="submit" name="btn_submit" class="button" value="Next">
+</div>
+</form>
+</body>
+</html>

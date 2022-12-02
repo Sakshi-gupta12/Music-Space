@@ -1,0 +1,103 @@
+
+
+.wrapper {
+    position: relative;
+  align: center;
+  width: 750px;
+  height: 76vh;
+  margin: 25px auto 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.wrapper::-webkit-scrollbar {
+	display: none;
+}
+.lan {
+	position: absolute;
+//	top: 30px;
+	height: auto;
+	width: 750px;
+	box-sizing: border-box;
+	margin: 50px 0px;
+}
+/* language content container */
+.lan-co {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+	padding: 0px 2px;
+}
+/* image in language content */
+.lan-co div img {
+	width: 10vw;
+//	min-width: 60px;
+	height: 10vw;
+//	min-height: 60px;
+	transition: box-shadow ease-in-out 0.1s;
+}
+
+/* items in language content */
+.lan-co div {
+	margin: 2vw 0px;
+	width: 10.2vw;
+//	min-width: 60px;
+}
+.lan-co div img.radio:checked ~ .lan-co div img{
+	box-shadow: 0px 0px 10px 1px white;
+}
+/* properties for release date and name of the song */
+.lan-co div p:nth-child(2n) {
+	width: 100%;
+	word-wrap: break-word;
+}
+.lan-con div p:nth-child(2n + 1) {
+	font-size: 12px;
+	font-weight: lighter;
+}
+.opt_it {
+  display: block;
+  position: relative;
+  width: 10vw;
+  height: 10vx;
+  margin: 10px;
+}
+
+.opt_it .radio {
+ position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.opt_it .opt_in {
+  width: 10vw;
+  height: 10vw;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+ // padding: 58px 40px;
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+ // border: 5px solid transparent;
+  position: relative;
+}
+
+.opt_it .opt_in.genre{
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: box-shadow ease-in-out 0.8s;
+  border-color: transparent;
+} 
+
+.opt_it .radio:checked ~ .opt_in.genre {
+    min-width: : 100%;
+    box-shadow: 0px 0px 10px 1px white;
+}
+
+   

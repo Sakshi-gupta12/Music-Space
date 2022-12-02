@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: url(pictures/2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(34, 49, 52,0.7);
+  top: 0;
+  z-index: 10;
+}
+
+
+.logo {
+  width: 60px;
+  margin-right: -10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  height: 60px;
+  box-shadow: 5px 5px rgba(204, 0, 153, 0.4),
+              10px 9px rgba(204, 0, 153, 0.3),
+              15px 11px rgba(204, 0, 153, 0.2),
+              20px 13px rgba(204, 0, 153, 0.1),
+              25px 15px rgba(204, 0, 153, 0.05);
+  transition: all 1s;
+}
+
+.header-left {
+  float: left;
+}
+.header-msg{
+    padding-top: 25px;
+    color: white;
+    float: left;
+    vertical-align: middle;
+    text-align: center; 
+    margin-left: 350px;
+    transition: all 1s;
+}
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 80px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+ // float: left;
+  transition: all 1s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.wrapper {
+  width: 780px;
+  margin: 100px auto 0;
+}
+
+.wrapper .title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container0 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container0 .option_item {
+  display: block;
+  position: relative;
+  width: 175px;
+  height: 175px;
+  margin: 10px;
+}
+
+.container0 .option_item .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.option_item .option_inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 58px 40px;
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+  border: 5px solid transparent;
+  position: relative;
+}
+
+.option_item .option_inner .name {
+  user-select: none;
+  padding: 6px 12px;
+  color: white;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+  opacity:0.8;
+}
+
+.option_item .option_inner .name:hover{
+    opacity: 1;
+}
+
+.option_item .option_inner.english{
+  background: url("pictures/english.jpg");
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+} 
+.option_item .checkbox:checked ~ .option_inner.english {
+  border-color: #3b5999;
+}
+
+.option_item .option_inner.hindi{
+  background: url(pictures/sitar.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item .checkbox:checked ~ .option_inner.hindi {
+  border-color: #55acee;
+}
+
+.option_item .option_inner.punjabi{
+  background: url(pictures/punjabi.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item .checkbox:checked ~ .option_inner.punjabi {
+  border-color: #e4405f;
+}
+
+.option_item .option_inner.spanish{
+  background: url(pictures/spanish.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item .checkbox:checked ~ .option_inner.spanish {
+  border-color: #0077b5;
+}
+
+.option_item .option_inner .tickmark {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border: 20px solid;
+  border-color: #000 transparent transparent #000;
+  display: none;
+}
+
+.option_item .option_inner .tickmark:before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 15px;
+  height: 5px;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+}
+
+.option_item .checkbox:checked ~ .option_inner .tickmark {
+  display: block;
+}
+
+.option_item .option_inner.english .tickmark {
+  border-color: #3b5999 transparent transparent #3b5999;
+}
+
+.option_item .option_inner.hindi .tickmark {
+  border-color: #55acee transparent transparent #55acee;
+}
+
+.option_item .option_inner.punjabi .tickmark {
+  border-color: #e4405f transparent transparent #e4405f;
+}
+
+.option_item .option_inner.spanish .tickmark {
+  border-color: #0077b5 transparent transparent #0077b5;
+}
+
+.wrapper1 {
+  width: 780px;
+  margin: 100px auto 0;
+}
+
+.wrapper1 .title1 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container1 .option_item1 {
+  display: block;
+  position: relative;
+  width: 175px;
+  height: 175px;
+  margin: 10px;
+}
+
+.container1 .option_item1 .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.option_item1 .option_inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 58px 40px;
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+  border: 5px solid transparent;
+  position: relative;
+}
+
+
+.option_item1 .option_inner .name {
+  user-select: none;
+  padding: 6px 12px;
+  color: white;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+  opacity:0.8;
+}
+
+.option_item1 .option_inner .name:hover{
+    opacity: 1;
+}
+
+.option_item1 .option_inner.pop{
+  background: url(pictures/pop.jpg);
+  background-size: 180px 180px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item1 .checkbox:checked ~ .option_inner.pop {
+  border-color: #3b5999;
+}
+
+.option_item1 .option_inner.rock{
+  background: url(pictures/rock.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item1 .checkbox:checked ~ .option_inner.rock {
+  border-color: #55acee;
+}
+
+.option_item1 .option_inner.rap{
+  background: url(pictures/rap.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item1 .checkbox:checked ~ .option_inner.rap {
+  border-color: #e4405f;
+}
+
+.option_item1 .option_inner.romantic{
+  background: url(pictures/romantic.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item1 .checkbox:checked ~ .option_inner.romantic {
+  border-color: #0077b5;
+ }
+ 
+ .option_item1 .option_inner.sad{
+  background: url(pictures/saad.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item1 .checkbox:checked ~ .option_inner.sad {
+  border-color: #25d366;
+}
+
+.option_item1 .option_inner .tickmark {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border: 20px solid;
+  border-color: #000 transparent transparent #000;
+  display: none;
+}
+
+.option_item1 .option_inner .tickmark:before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 15px;
+  height: 5px;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+}
+
+.option_item1 .checkbox:checked ~ .option_inner .tickmark {
+  display: block;
+}
+
+.option_item1 .option_inner.pop .tickmark {
+  border-color: #3b5999 transparent transparent #3b5999;
+}
+
+.option_item1 .option_inner.rock .tickmark {
+  border-color: #55acee transparent transparent #55acee;
+}
+
+.option_item1 .option_inner.rap .tickmark {
+  border-color: #e4405f transparent transparent #e4405f;
+}
+
+.option_item1 .option_inner.romantic .tickmark {
+  border-color: #0077b5 transparent transparent #0077b5;
+}
+.option_item1 .option_inner.sad .tickmark {
+  border-color: #25d366 transparent transparent #25d366;
+}
+.wrapper2 {
+  width: 780px;
+  margin: 100px auto 0;
+}
+
+.wrapper2 .title2 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container2 .option_item2 {
+  display: block;
+  position: relative;
+  width: 175px;
+  height: 175px;
+  margin: 10px;
+}
+
+.container2 .option_item2 .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.option_item2 .option_inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 58px 40px;
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+  border: 5px solid transparent;
+  position: relative;
+}
+
+
+
+.option_item2 .option_inner .name {
+  user-select: none;
+  padding: 6px 12px;
+  color: white;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+  opacity:0.8;
+}
+
+.option_item2 .option_inner .name:hover{
+    opacity: 1;
+}
+
+.option_item2 .option_inner.postmalone{
+  background: url(pictures/postmalonebg.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.postmalone {
+  border-color: #3b5999;
+}
+
+.option_item2 .option_inner.shakira{
+  background: url(pictures/shakira.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.shakira{
+  border-color: #55acee;
+}
+
+.option_item2 .option_inner.gr{
+  background: url(pictures/gr.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.gr {
+  border-color: #e4405f;
+}
+
+.option_item2 .option_inner.m5{
+  background: url(pictures/m5.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.m5 {
+  border-color: #0077b5;
+}
+
+.option_item2 .option_inner.sg{
+  background: url(pictures/sg.png);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.sg {
+  border-color: #25d366;
+}
+
+.option_item2 .option_inner.hs{
+  background: url(pictures/hs.png);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.hs {
+  border-color: #dd4b39;
+}
+
+.option_item2 .option_inner.ozuna{
+  background: url(pictures/ozuna.jpeg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.ozuna {
+  border-color: #ff5700;
+}
+
+.option_item2 .option_inner.arijit{
+  background: url(pictures/as.jpg);
+  background-size: 175px 175px;
+  opacity:1;
+  display: block;
+  position: relative;
+  transition: 0.8s;
+  border-color: rgba(34, 49, 52,0.7);
+}
+.option_item2 .checkbox:checked ~ .option_inner.arijit {
+  border-color: #b92b27;
+}
+
+.option_item2 .option_inner .tickmark {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border: 20px solid;
+  border-color: #000 transparent transparent #000;
+  display: none;
+}
+
+.option_item2 .option_inner .tickmark:before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 15px;
+  height: 5px;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+}
+
+.option_item2 .checkbox:checked ~ .option_inner .tickmark {
+  display: block;
+}
+
+.option_item2 .option_inner.postmalone .tickmark {
+  border-color: #3b5999 transparent transparent #3b5999;
+}
+
+.option_item2 .option_inner.shakira .tickmark {
+  border-color: #55acee transparent transparent #55acee;
+}
+
+.option_item2 .option_inner.gr .tickmark {
+  border-color: #e4405f transparent transparent #e4405f;
+}
+
+.option_item2 .option_inner.m5 .tickmark {
+  border-color: #0077b5 transparent transparent #0077b5;
+}
+
+.option_item2 .option_inner.sg .tickmark {
+  border-color: #25d366 transparent transparent #25d366;
+}
+
+.option_item2 .option_inner.hs .tickmark {
+  border-color: #dd4b39 transparent transparent #dd4b39;
+}
+
+.option_item2 .option_inner.ozuna .tickmark {
+  border-color: #ff5700 transparent transparent #ff5700;
+}
+
+.option_item2 .option_inner.arijit .tickmark {
+  border-color: #b92b27 transparent transparent #b92b27;
+}
+
+.final{
+  width: 780px;
+  margin: 100px auto 0;
+}
+.button {
+  background-color: plum;
+  border: none;
+  opacity: 0.8;
+  border-radius: 4px;
+  color: black;
+  padding: 15px 40px;
+  margin-top: 20px;
+  margin-bottom: 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 7px whitesmoke;
+  cursor: pointer;
+  transition: height 0.4s;
+  position: relative;
+}
+.button:active {
+  position: relative;
+  top: 7px;
+  box-shadow: dimgray;
+}
+
+
+.button:hover {
+    opacity: 1;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}

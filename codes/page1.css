@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+}
+
+html,body,ul,ol,li,h1,h2,h3,h4,h5,h6,p,div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Grande";
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.parallax1,.parallax2,.parallax3 {
+  position: relative;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax1 {
+  background-image: url("web/pictures/piano.jpg");
+  min-height: 100%;
+}
+
+.parallax2 {
+  background-image: url("web/pictures/cassette.jpg");
+  min-height: 400px;
+}
+
+.parallax3 {
+  background-image: url("web/pictures/album.jpg");
+  min-height: 400px;
+}
+.clear {
+  clear: left;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+
+
+header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: url(web/pictures/bg7.png) center center/cover;
+}
+
+
+.logo {
+  width: 60px;
+  margin-right: -10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  height: 60px;
+  box-shadow: 5px 5px rgba(204, 0, 153, 0.4),
+              10px 9px rgba(204, 0, 153, 0.3),
+              15px 11px rgba(204, 0, 153, 0.2),
+              20px 13px rgba(204, 0, 153, 0.1),
+              25px 15px rgba(204, 0, 153, 0.05);
+  transition: all 1s;
+}
+
+.header-right {
+  float: right;
+}
+
+.main-content {
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  vertical-align: middle;
+}
+
+.concept {
+  position: absolute;
+ // overflow: hidden;
+}
+
+.concept:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+ //background: radial-gradient(rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.concept:hover:before {
+  opacity: 0.5;
+}
+
+
+.concept-six {
+  display: flex;
+  margin-left: 200px;
+}
+.concept-six .word {
+  width: 500px;
+  margin-left: 50%;
+  display: flex;
+  height: 80px;
+  color: whitesmoke;
+}
+.concept-six .word:hover .char:nth-child(1) {
+  margin-top: -5px;
+  transform: rotate(-20deg);
+}
+.concept-six .word:hover .char:nth-child(2) {
+  margin: -40px 0px 0 10px;
+  transform: rotate(5deg);
+}
+.concept-six .word:hover .char:nth-child(3) {
+  margin: 15px 0 0 10px;
+  transform: rotate(12deg);
+}
+
+.concept-six .char {
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.header-left {
+  float: left;
+  margin-left: -25px;
+}
+
+.header-left a {
+  line-height: 80px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  transition: all 1s;
+}
+
+.header-left a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.top-wrapper {
+  padding: 300px 0 140px 0;
+  color: white;
+  text-align: center;
+  opacity:0.9;
+}
+
+.top-wrapper h2 {
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  margin: 20px 0;
+  background-color: rgb(51, 51, 51);
+}
+
+.message{
+  padding: 100px 0 70px 0;
+  color: white;
+  text-align: center;
+  opacity:0.9;
+}
+
+.message-wrapper {
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  margin: 20px 0;
+  background-color: rgb(51, 51, 51);
+}
+
+.button{
+    background: #222;
+    background: linear-gradient(#333, #222);
+    box-sizing: border-box;
+    border: 2px solid #2ecc71;
+    box-shadow: 0 2px 0 #000;
+    color: #efe;
+    display: block;
+    margin: 60px 55px;
+    text-align: center;
+    padding: 60px 60px;
+    outline: none;
+    float:left;
+    border-radius: 24px;
+    transition: 1s;
+    cursor: pointer;
+}
+.button:hover, .button:focus{
+    animation: glow 800ms ease-out infinite alternate;
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    color: #5f5;
+    outline: none;
+}
+@keyframes glow {
+    0%{
+        border-color: #393;
+        box-shadow: 0 0 5px #00ff0033, inset 0 0 5px #00ff001a, 0 2px 0 #000 ;
+    }
+    100%{
+        border-color: #6f6;
+        box-shadow: 0 0 20px #00ff0099, inset 0 0 10px #00ff0066, 0 2px 0 #000;
+    }
+}
+
+.footer-msg{
+  color: whitesmoke;
+  opacity:0.8;
+  font-size: 20px;
+  float: right;
+  padding: 10px 10px;
+  margin-right: -25px;
+}
+
+footer {
+  height: 80px;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+

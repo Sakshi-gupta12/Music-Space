@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Grande";
+  overflow-style: scrollbar;
+}
+
+body{
+    background-image:  url("pictures/CDs.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: url(pictures/bg7.png) center center/cover;
+}
+
+
+.logo {
+width: 60px;
+  margin-right: -10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  height: 60px;
+  box-shadow: 5px 5px rgba(204, 0, 153, 0.4),
+              10px 9px rgba(204, 0, 153, 0.3),
+              15px 11px rgba(204, 0, 153, 0.2),
+              20px 13px rgba(204, 0, 153, 0.1),
+              25px 15px rgba(204, 0, 153, 0.05);
+  transition: all 1s;
+}
+
+.header-right {
+  float: right;
+}
+
+.main-content {
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  vertical-align: middle;
+}
+
+.concept {
+  position: absolute;
+ // overflow: hidden;
+}
+
+.concept:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+ //background: radial-gradient(rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.concept:hover:before {
+  opacity: 0.5;
+}
+
+
+.concept-six {
+  display: flex;
+  align-items: center;
+  margin-left: 250px;
+}
+.concept-six .word {
+  width: 550px;
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  color: whitesmoke;
+}
+.concept-six .word:hover .char:nth-child(1) {
+  margin-top: -30px;
+  transform: rotate(-20deg);
+}
+.concept-six .word:hover .char:nth-child(2) {
+  margin: -40px 0px 0 10px;
+  transform: rotate(5deg);
+}
+.concept-six .word:hover .char:nth-child(3) {
+  margin: 15px 0 0 10px;
+  transform: rotate(12deg);
+}
+.concept-six .word:hover .char:nth-child(4) {
+  margin: -25px 0 0;
+  transform: rotate(5deg);
+}
+.concept-six .word:hover .char:nth-child(5) {
+  margin: -40px 5px 0;
+  transform: rotate(-10deg);
+}
+.concept-six .word:hover .char:nth-child(6) {
+  margin: -40px 0px 0 10px;
+  transform: rotate(5deg);
+}
+.concept-six .word:hover .char:nth-child(7) {
+  margin: 15px 0 0 10px;
+  transform: rotate(12deg);
+}
+.concept-six .word:hover .char:nth-child(8) {
+  margin-top: -30px;
+  transform: rotate(-20deg);
+}
+.concept-six .char {
+  flex: 1;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.header-left {
+  float: left;
+  margin-left: -25px;
+}
+
+.header-left a {
+  line-height: 80px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  transition: all 1s;
+}
+
+.header-left a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.registers{
+  padding: 10px 30px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.details {
+  background: #222222;
+  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 50%);
+  color: white; 
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  opacity: 0.9;
+  margin-top: 15%;
+  bottom: 10%;
+  margin-right: 20%;
+  margin-left: 28%;
+}
+.details:hover {
+  opacity: 1;
+}
+#div1, #div2, #div3, #div4, #div5{
+ padding: 12px 24px;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 25px;
+  text-align: center;
+  transition: 0.25; 
+  margin: 20px auto;
+  font-size: 20px;
+  background: #222;
+  background: linear-gradient(#333, #222);
+  box-sizing: border-box;
+  border: 2px solid #3498db;
+  box-shadow: 0 2px 0 #000;
+  color: #efe;
+  outline: none;
+  text-shadow: 0 -1px 0 #000;
+  cursor: pointer;
+}
+#div7{
+     padding: 12px 24px;
+     text-align: center;
+     transition: all 0.5s;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     font-size: 15px;
+     font-family: titillium web,sans-serif;
+}
+
+#div1:hover,#div1:focus{
+    animation: glow 800ms ease-out infinite alternate;
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    color: #5f5;
+    outline: none;
+    opacity: 1;
+}
+
+#div2:hover,#div2:focus{
+    animation: glow 800ms ease-out infinite alternate;
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    color: #5f5;
+    outline: none;
+    opacity: 1;
+}
+
+#div3:hover,#div3:focus{
+    animation: glow 800ms ease-out infinite alternate;
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    color: #5f5;
+    outline: none;
+    opacity: 1;
+}
+
+#div4:hover,#div4:focus{
+    animation: glow 800ms ease-out infinite alternate;
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    color: #5f5;
+    outline: none;
+    opacity: 1;
+}
+
+#div5:hover,#div5:focus{
+    animation: glow 800ms ease-out infinite alternate;
+    background: #292929;
+    background: linear-gradient(#393939, #292929);
+    color: #5f5;
+    outline: none;
+    opacity: 1;
+}
+@keyframes glow {
+    0%{
+        border-color: #393;
+        box-shadow: 0 0 5px #00ff0033, inset 0 0 5px #00ff001a, 0 2px 0 #000 ;
+    }
+    100%{
+        border-color: #6f6;
+        box-shadow: 0 0 20px #00ff0099, inset 0 0 10px #00ff0066, 0 2px 0 #000;
+    }
+}
+
+.button {
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  border: none;
+  opacity: 0.9;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 7px wheat;
+  cursor: pointer;
+  transition: none;
+}
+.button:active {
+  position: relative;
+  top: 7px;
+  opacity: 1;
+  box-shadow: none;
+}
+
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
